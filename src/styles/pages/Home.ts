@@ -1,52 +1,125 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
 
-  h1 {
-    font-size: 54px;
-    color: ${props => props.theme.colors.onyx};
-    margin-top: 40px;
-  }
-
-  p {
-    margin-top: 24px;
-    font-size: 24px;
-    line-height: 32px;
-  }
+  position: absolute;
+  height: 62px;
+  left: 0px;
+  top: 0px;
 
   .header {
     display: flex;
+    justify-content: space-between;
+    width: 100vw;
     height: 62px;
-    width: 100%;
-    background: ${props => props.theme.colors.cruise};
+    flex-flow: row wrap;
+    background: ${props => props.theme.colors.white};
+    border: 1px solid ${props => props.theme.colors.neutral1};
   }
 
   .brand {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background: ${props => props.theme.colors.onyx};
-    padding: 0px;
-    gap: 32px;
-    
-    width: 67.47px;
-    height: 61px;
-    
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    line-height: 62px;
   
-    margin-right: 1px solid ${props => props.theme.colors.black};
+    width: 100px;
+    justify-content: center;
+    items-align: center;
+    /* item on center*/
+    background: ${props => props.theme.colors.white};
+    border-right: 1px solid ${props => props.theme.colors.neutral1};
+    padding-top: 13.15px;
+    padding-bottom: 13.15px;
+  }
+
+  .brandname {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 9vw;
+    min-width: 150px;
+
+    
+    items-align: center;
+    /* item on center*/
+    background: ${props => props.theme.colors.white};
+    border: 1px solid ${props => props.theme.colors.neutral1};
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+    padding-left: 32px;
+    padding-right: 32px;
 
   }
+
+  .brandname-img {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+
+  }
+
+  .avatarName {
+    /* Title */
+
+
+    width: 110px;
+    height: 14px;
+
+    /* Heading/14 SB XXS */
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+
+    display: flex;
+    align-items: center;
+
+    /* Neutral Colors/Black */
+
+    color: #34423D;
+
+
+    /* Inside auto layout */
+
+    flex: row;
+
+  }
+  
+  .avatarDados {
+    /* Description */
+
+
+    width: 76px;
+    height: 14px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    /* or 14px */
+
+    display: flex;
+    align-items: center;
+
+    /* Neutral Colors/Neutral5 */
+
+    color: #587169;
+
+
+    /* Inside auto layout */
+
+    flex: row;
+
+  }
+  
+
 
 `

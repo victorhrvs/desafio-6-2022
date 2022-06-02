@@ -9,8 +9,12 @@ const theme = {
     onyx: '#34423d',
     snowdrift: '#f5faf8',
     snowdrift2: '#f8faf9',
-    white: '#ffffff'
+    white: '#ffffff',
+    neutral1: '#EFEDE0',
+    neutralColorsBlack: '#34423D',
+    neutralColorsNeutral5: '#587169',
   }
 }
 
 export default theme
+
