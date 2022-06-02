@@ -120,6 +120,43 @@ export const Container = styled.div`
 
   }
   
+  @media (max-width: 1024px) {
+    .header{
+      justify-content: center;
+      background: ${props => props.theme.colors.white};
+      border: 1px solid ${props => props.theme.colors.neutral1};
+    }
 
+    .brand {
+      border-right: 0px solid ${props => props.theme.colors.white};
+      margin: 0px;	
+    }
+
+    .avatarName{
+      display: none;
+    }
+    .avatarDados{
+      display: none;
+    }
+
+    .brandname-img {
+      display: absolute;
+    }
+    .brandname {
+      position: absolute;
+      justify-content: center;
+      top: 0px;
+      left: 0px;
+      width: 32px;
+      height: 32px;
+      padding-top: 14.5px;
+      padding-bottom: 14.5px;
+      padding-left: 14.5px;
+      padding-right: 14.5px;
+      min-width: 32px;
+      border: 0px solid ${props => props.theme.colors.neutral1};
+    }
+  }
+  
 
 `
