@@ -2,9 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import { Container } from '../styles/pages/Home'
 import Header from '../components/common/Header/header'
-import Agents from '../components/Agents/agents'
-import Roles from '../components/Roles/roles'
-import api from '../api/api'
+import AgentDetail from '../components/Agents/agentdetail'
+
 
 const Home: React.FC = () => {
   return (
@@ -13,8 +12,8 @@ const Home: React.FC = () => {
         <title>Homepage</title>
       </Head>
       <Header />
-      <Agents />
-      <Roles />
+      <AgentDetail />
+
     </Container>
   )
 }
