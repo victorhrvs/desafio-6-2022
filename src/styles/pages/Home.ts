@@ -1,24 +1,30 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
+
+const white = '#FFFFFF'
+const neutral1 = '#EAEFED'
+const background = '#E5E5E5'
 
 export const Container = styled.div`
+
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-
   position: absolute;
-  height: 62px;
   left: 0px;
   top: 0px;
+  right: 0px;
+  bottom: 0px;
 
   .header {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    width: 99.89vw;
     height: 62px;
     flex-flow: row wrap;
-    background: ${props => props.theme.colors.white};
-    border: 1px solid ${props => props.theme.colors.neutral1};
+    background: ${white};
+    border: 1px solid ${neutral1};
   }
 
   .brand {
@@ -28,8 +34,8 @@ export const Container = styled.div`
     justify-content: center;
     items-align: center;
     /* item on center*/
-    background: ${props => props.theme.colors.white};
-    border-right: 1px solid ${props => props.theme.colors.neutral1};
+    background: ${white};
+    border-right: 1px solid ${neutral1};
     padding-top: 13.15px;
     padding-bottom: 13.15px;
   }
@@ -44,8 +50,8 @@ export const Container = styled.div`
     
     items-align: center;
     /* item on center*/
-    background: ${props => props.theme.colors.white};
-    border: 1px solid ${props => props.theme.colors.neutral1};
+    background: ${white};
+    border: 1px solid ${neutral1};
     padding-top: 14.5px;
     padding-bottom: 14.5px;
     padding-left: 32px;
@@ -123,12 +129,12 @@ export const Container = styled.div`
   @media (max-width: 1024px) {
     .header{
       justify-content: center;
-      background: ${props => props.theme.colors.white};
-      border: 1px solid ${props => props.theme.colors.neutral1};
+      background: ${white};
+      border: 1px solid ${neutral1};
     }
 
     .brand {
-      border-right: 0px solid ${props => props.theme.colors.white};
+      border-right: 0px solid ${white};
       margin: 0px;	
     }
 
@@ -154,9 +160,33 @@ export const Container = styled.div`
       padding-left: 14.5px;
       padding-right: 14.5px;
       min-width: 32px;
-      border: 0px solid ${props => props.theme.colors.neutral1};
+      border: 0px solid ${neutral1};
     }
   }
   
+  .main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: ${background};
+  }
+  .card {
+    display: flex;
+
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    margin-top: 10px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 20px;
+    background: ${white};
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(165, 171, 179, 0.16);
+
+}
 
 `

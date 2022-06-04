@@ -5,6 +5,7 @@ import Header from '../components/common/Header/header'
 import Agents from '../components/Agents/agents'
 import Roles from '../components/Roles/roles'
 import api from '../api/api'
+import Card from '../components/common/Card/card'
 
 const Home: React.FC = () => {
   return (
@@ -13,8 +14,12 @@ const Home: React.FC = () => {
         <title>Homepage</title>
       </Head>
       <Header />
-      <Agents />
-      <Roles />
+      <div className='main'>
+        <div className="card">
+          <Agents />
+          <Roles />
+        </div>
+      </div>
     </Container>
   )
 }
