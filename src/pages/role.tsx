@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { Container } from '../styles/pages/Home'
+import { Container } from '../styles/components/common/pages'
 import Header from '../components/common/Header/header'
 import RolePermissions from '../components/Roles/rolepermissions'
 

@@ -47,8 +47,8 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet"/>
 
-          <link rel="icon" href="../assets/brand.ico" />
-          <link rel="shortcut icon" href="../assets/brand16.ico" />
+          <link rel="icon" href="./brand.ico" />
+          <link rel="shortcut icon" href="./brand16.ico" />
         </Head>
         <body>
           <Main />

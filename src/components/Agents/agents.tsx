@@ -22,8 +22,9 @@ function AgentsComponent(): JSX.Element {
 
   return (
     <div>
+      <h2 id='listColab'>Listagem de colaboradores</h2>
       <table>
-        <tr>
+        <tr className='headerTable'>
           <th>Nome completo</th>
           <th>Departamento</th>
           <th>Cargo</th>
@@ -33,8 +34,8 @@ function AgentsComponent(): JSX.Element {
         </tr>
         {info?.map(item => (
         <tr key={item.agent_id}>
-            <td>
-              <img src={item.image} width={32} height={32} />
+            <td className='bold'>
+              <img src={item.image} width={32} height={32} style={{borderRadius: '80px'}}/>
               {item.name}
             </td>
             <td>{item.department}</td>
