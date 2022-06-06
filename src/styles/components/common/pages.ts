@@ -166,6 +166,7 @@ export const Container = styled.div`
     width: 100%;
     display: flex-column;
     justify-content: center;
+    align-items: center;
     background: ${background};
   }
   .voltar {
@@ -196,6 +197,7 @@ export const Container = styled.div`
   }
   .card {
     display: flex-column;
+  
 
     padding-left: 24px;
     padding-right: 24px;
@@ -208,10 +210,15 @@ export const Container = styled.div`
     margin-left: 10vw;
     margin-right: 10vw;
     margin-bottom: 20px;
-    background: #f8faf9;
+    background: white;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(165, 171, 179, 0.16);
+    box-shadow: 0px 4px 8px rgba(165, 171, 179, 0.2);
   }
+
+  .card-details {
+    max-width: 800px;
+  }
+
   .tab {
     background: ${white};
     display: flex;

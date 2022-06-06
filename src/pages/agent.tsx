@@ -19,7 +19,7 @@ const Home: React.FC = () => {
           <h1 className='voltah1'>Detalhes do colaborador</h1>
         </div>
 
-        <div className="card colab" >
+        <div className="card colab card-details" >
           <AgentDetail />
         </div>
       </div>
