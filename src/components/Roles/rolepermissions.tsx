@@ -23,8 +23,8 @@ function RolePermissionsComponent(): JSX.Element {
 
   return (
     <div>
-    <div>Departamento {info.department}</div>
-    <div>Cargo {info.name}</div>
+      <div>Departamento {info.department}</div>
+      <div>Cargo {info.name}</div>
       <table>
         <tr>
           <th>Cargo</th>
@@ -32,25 +32,51 @@ function RolePermissionsComponent(): JSX.Element {
           <th>Editar</th>
           <th>Excluir</th>
         </tr>
-     
 
-      
-      {info.grouprules.map(item => 
-        
-        <tr> 
-        <td>{item.role}</td>
-        <td>{item.read}</td>
+        {info.grouprules.map(item => (
+          <tr key={item.id}>
+            <td>{item.role}</td>
+            <td>{item.read}</td>
 
-            <td><input type='checkbox' className='read' id={item.role}   checked={'read' == item.permissions[0]|| 'read' == item.permissions[1] || 'read' == item.permissions[2]}  /></td>
-            <td><input type='checkbox' className='write' id={item.role}  checked={'write' == item.permissions[0]|| 'write' == item.permissions[1] || 'write' == item.permissions[2]} /></td>
-            <td><input type='checkbox' className='delete' id={item.role} checked={'delete' == item.permissions[0]|| 'delete' == item.permissions[1] || 'delete' == item.permissions[2]}/></td>
-        
-        
-        
-        </tr>
-        
-        )}
-        </table>
+            <td>
+              <input
+                type="checkbox"
+                className="read"
+                id={item.role}
+                checked={
+                  item.permissions[0] === 'read' ||
+                  item.permissions[1] === 'read' ||
+                  item.permissions[2] === 'read'
+                }
+              />
+            </td>
+            <td>
+              <input
+                type="checkbox"
+                className="write"
+                id={item.role}
+                checked={
+                  item.permissions[0] === 'write' ||
+                  item.permissions[1] === 'write' ||
+                  item.permissions[2] === 'write'
+                }
+              />
+            </td>
+            <td>
+              <input
+                type="checkbox"
+                className="delete"
+                id={item.role}
+                checked={
+                  item.permissions[0] === 'delete' ||
+                  item.permissions[1] === 'delete' ||
+                  item.permissions[2] === 'delete'
+                }
+              />
+            </td>
+          </tr>
+        ))}
+      </table>
     </div>
   )
 }

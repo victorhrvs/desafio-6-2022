@@ -1,7 +1,5 @@
-import Image from 'next/image'
 import Head from 'next/head'
 import Brand from '../../../assets/brand.svg'
-import avatar from '../../../../public/avatar.png'
 import React from 'react'
 
 function HeaderComponent(): JSX.Element {

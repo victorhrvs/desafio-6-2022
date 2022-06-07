@@ -14,17 +14,16 @@ function AgentDetailComponent(): JSX.Element {
   const [birth, setBirth] = React.useState('null')
 
   async function defineBirth(dados) {
+    let a
     try {
-      var a = await resolverDepoisDe2Segundos(dados)
-    } catch (error) {
-      error => {
-        console.log(error)
-      }
+      a = await resolverDepoisDe2Segundos(dados)
       const date = new Date(String(a))
       const day = date.getDate().toString().padStart(2, '0')
       const month = (date.getMonth() + 1).toString().padStart(2, '0')
       const year = date.getFullYear()
       setBirth(`${day}/${month}/${year}`)
+    } catch (error) {
+      console.log(error)
     }
   }
 
@@ -93,16 +92,12 @@ function AgentDetailComponent(): JSX.Element {
         <h2>Dados organizacionais</h2>
 
         <div className="limit">
-          
           <select className="menuSelect" name="Departamento" id="departament">
             <option value={info.departament} selected>
               {info.departament}
             </option>
           </select>
-        
 
-        
-          
           <select className="menuSelect" name="Cargo" id="branch">
             <option value={info.branch} selected>
               {info.branch}
@@ -111,15 +106,12 @@ function AgentDetailComponent(): JSX.Element {
         </div>
 
         <div className="limit">
-          
           <select className="menuSelect" name="Unidade" id="role">
             <option value={info.role} selected>
               {info.role}
             </option>
           </select>
 
-
-          
           <select className="menuSelect" name="Status" id="status">
             <option value={info.status} selected>
               {info.status}

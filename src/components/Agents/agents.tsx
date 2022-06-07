@@ -22,9 +22,9 @@ function AgentsComponent(): JSX.Element {
 
   return (
     <div>
-      <h2 id='listColab'>Listagem de colaboradores</h2>
+      <h2 id="listColab">Listagem de colaboradores</h2>
       <table>
-        <tr className='headerTable'>
+        <tr className="headerTable">
           <th>Nome completo</th>
           <th>Departamento</th>
           <th>Cargo</th>
@@ -33,17 +33,23 @@ function AgentsComponent(): JSX.Element {
           <th>...</th>
         </tr>
         {info?.map(item => (
-        <tr key={item.agent_id}>
-            <td className='bold'>
-              <img src={item.image} width={32} height={32} style={{borderRadius: '80px'}}/>
+          <tr key={item.agent_id}>
+            <td className="bold">
+              <img
+                src={item.image}
+                width={32}
+                height={32}
+                style={{ borderRadius: '80px' }}
+              />
               {item.name}
             </td>
             <td>{item.department}</td>
             <td>{item.branch}</td>
             <td>{item.role}</td>
-            <td /* Existe uma inconsistência na label da API do backend no id=15*/>
-                {item.status||item.inactivestatus}</td >
-            
+            <td>
+              {item.status || item.inactivestatus}
+            </td>
+
             <td>...</td>
           </tr>
         ))}

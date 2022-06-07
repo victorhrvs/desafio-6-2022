@@ -29,15 +29,12 @@ function AgentsComponent(): JSX.Element {
           <th>Colaboradores</th>
           <th>...</th>
         </tr>
-        {info?.map((item, index )=> (
+        {info?.map((item, index) => (
           <tr key={index}>
-            <td>
-              {item.name}
-            </td>
+            <td>{item.name}</td>
             <td>{item.departament}</td>
             <td>{item.agents_quantity}</td>
             <td>...</td>
-
           </tr>
         ))}
       </table>
